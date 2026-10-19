@@ -28,7 +28,13 @@ defmodule PlugAttack.Mixfile do
     [
       {:plug, "~> 1.0"},
       {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false},
+      {:eqwalizer_support,
+       git: "https://github.com/erszcz/erlang-language-platform.git",
+       sparse: "eqwalizer/eqwalizer_support",
+       branch: "main",
+       only: :dev,
+       runtime: false}
     ]
   end
 
